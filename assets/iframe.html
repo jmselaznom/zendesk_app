@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/combine/npm/@zendeskgarden/css-bedrock@7.0.21,npm/@zendeskgarden/css-utilities@4.3.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="details_loading" class="spinner-grow" role="status"></div>
+    <div id="user_details" class="main_div" style="display:none">
+        <div id="avatar_div" class="center">
+            <figure>
+                <img id="user_photo" class="avatar" src="" alt="Avatar">
+            </figure>
+            <div id="user_name_div" border="1">
+                <span id="user_name"></span>
+            </div>
+
+        </div>
+        <div id="identities" class="delim">
+            <script id="requester-identities" type="text/x-handlebars-template">
+            <table id="identity" class="center" >
+                {{#each identities as |item|}}
+                    <tr>
+                        <td class="label"><span>{{item.type}}</span></td>
+                        <td class="data"><span class="identityValue" data-toggle="tooltip" title="Copied!">{{item.value}}</span></td>
+                    </tr>
+                {{/each}}
+            </table>
+            <textarea id="textToCopy" style="display: none"></textarea>
+          </script>
+        </div>
+        <div id="content" class="delim">
+            <script id="requester-template" type="text/x-handlebars-template">
+            <table >
+                {{#each user.otherDetails as |userItem|}}
+                <tr>
+                    <td class="label">{{userItem.type}}</td>
+                    <td class="data">{{userItem.value}}</td>
+                </tr>
+                {{/each}}
+                <tr>    
+                    <td class="label">Tags:</td>
+                    <td class="data">
+                        {{#if tags}}
+                            {{#each tags}}
+                                {{this}}
+                            {{/each}}
+                        {{else}} 
+                            -
+                        {{/if}}
+                    </td>
+                </tr>
+            <tr>
+              <td class="label" >Notes:</td>
+              <td contenteditable="true">
+                <textarea >
+                    {{#if notes}}
+                        {{this}}
+                    {{/if}}
+                  </textarea>
+                </td>
+            </tr>
+            </table>
+        </div>
+        <div id="content" class="delim">
+            <table class ="tickets center">
+                {{#each user.userTicketDetails as |userTicketItem|}}
+                    <tr>
+                        <td class="label">{{userTicketItem.type}}</td>
+                        <td class="data">{{userTicketItem.value}}</td>
+                    </tr>
+                {{/each}}
+            </tableclass ="tickets">
+          </script>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@4.3.3/dist/handlebars.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="main.js"></script>
+    </div>
+</body>
+
+</html>

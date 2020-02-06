@@ -1,0 +1,103 @@
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+figure {
+    display: inline-block;
+    width: 40px;
+    height: inherit;
+    border-radius: 50%;
+    margin: 0;
+    margin-right: 10px;
+    padding-bottom: inherit;
+}
+
+textarea{
+    resize: vertical;
+    padding: .42857em .85714em;
+    line-height: 5px;
+}
+
+textarea:focus {
+    outline-offset: -2px;
+}
+
+footer {
+    font-size: 10px;
+    padding-top: 20px;
+}
+
+.main_div {
+    padding: 15px 15px 10px;
+}
+
+.avatar{
+    border-radius: inherit;
+}
+
+#avatar_div {
+    flex-direction: row;
+    margin-bottom: 18px;
+    text-align: left;
+    display: flex;
+    height: 40px;
+}
+
+#user_name_div {
+    margin: 0;
+    display: inline-block;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex: 1 1 0%;
+    justify-content: center;
+    -webkit-box-pack: center;
+    overflow: hidden;
+    font-weight: 600;
+    display: flex;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    height: 40px;
+}
+.data {
+    color: #2F3941;
+    padding-left: 6px;
+}
+.label{
+    color: #68737D;
+    padding-left: 6px;
+    font-size: inherit;
+    line-height: 2.3;
+}
+
+#content td , #identities td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+
+div.delim{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 3px inset #78a300;
+
+}
+
+table.tickets tr td{
+    font-size: 10px !important;
+    padding : 1px;
+    padding-left: 6px;
+}
+
+body, strong, em, b, i, h1, h2, h3, h4, h5, h6, address, label, select, input, textarea, button {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif !important;
+}
