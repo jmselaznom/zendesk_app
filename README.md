@@ -13,5 +13,3 @@
 
 * This app is for coding exercise only.
 
-Please submit bug reports to [Insert Link](). Pull requests are welcome.
-
